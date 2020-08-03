@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Stylesheet } from 'react-native';
+import { Text, View, StyleSheet } from 'react-native';
 
 export const Item = ( props ) => {
     return(
@@ -14,7 +14,7 @@ const itemStyles = StyleSheet.create({
     item : {
         padding: 10,
         display: 'flex',
-        flexdirection: 'row',
+        flexDirection: 'row',
         justifyContent: 'space-between'
     },
 
