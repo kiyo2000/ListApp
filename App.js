@@ -1,8 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {Component} from 'react'; //Using class ->{Component}
 import { StyleSheet, Text, View, SafeAreaView, FlatList, TextInput, Button, TouchableOpacity, TouchableWithoutFeedback  } from 'react-native';//Add Flatlist
-
+// third party components
+import RNPickerSelect from 'react-native-picker-select';
+// custom components
 import {Item} from './components/Item'; // How to import another js file.
+
 
 /*Using a class*/
 export default class App extends Component {
@@ -16,8 +19,15 @@ export default class App extends Component {
   // ListData = [
   //   { id: '1', amount: 50, category: 'food'},
   //   { id: '2', amount: 150, category: 'gorceries'},
-  //   { id: '3', amount: 50, category: 'transport'},
   // ]
+
+  dropdownItems =[
+    { label: 'Food' , value: 'food'},
+    { label: 'Transport' , value: 'transport'},
+    { label: 'Rent' , value: 'rent'},
+    { label: 'Grocery' , value: 'grocery'},
+    { label: 'Entertainment' , value: 'entertainment'}
+  ]
 
   render() {
     return (
@@ -30,12 +40,18 @@ export default class App extends Component {
                 onChangeText={ text => this.setState({ expenseAmount: parseFloat
                 (text) }) }
                 keyboardType="number-pad"/>
-          <TextInput
+          {/* <TextInput
             style={styles.input}
             placeholder="category"
             onChangeText={ text => this.setState({ expenseCategory: text }) }
+          /> */}
+          {/* <Button title="Add" onPress={this.addItem()} /> */}
+          <RNPickerSelect 
+            items = { this.dropdownItems }
+            value = { this.state.expenseCategory }
+            onValueChange = { value => this.setState({expenseCategory: value})  }
+            useNativeAndroidPickerStyle = { false }
           />
-          <Button title="Add" onPress={this.addItem()} />
         </View>
         {/* wrap the button in view*/}
         <View>
