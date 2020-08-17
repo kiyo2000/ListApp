@@ -51,6 +51,7 @@ export default class App extends Component {
             value = { this.state.expenseCategory }
             onValueChange = { value => this.setState({expenseCategory: value})  }
             useNativeAndroidPickerStyle = { false }
+            style={pickerStyle}
           />
         </View>
         {/* wrap the button in view*/}
@@ -92,8 +93,13 @@ export default class App extends Component {
 }
 
 const colors = {
-  primary : 'hsla(330, 38%, 65%, 1)'
+  primary : '#03fcba'//'hsla(330, 38%, 65%, 1)'
 }
+
+const pickerPlaceholder = {
+  label: 'Select category', value: null, color: 'black'
+}
+
 const styles = StyleSheet.create({
   main: {
     paddingHorizontal: 10,
@@ -106,16 +112,30 @@ const styles = StyleSheet.create({
     marginVertical: 15
   },
   button: {
-    padding: 15,
+    marginTop: 10,
+    padding: 20,
     backgroundColor: colors.primary
   },
   buttonText: {
+    fontSize: 20, 
+    fontWeight: 'bold',
     color: 'white',
     textAlign: 'center'
   }
 })
 
-//FROM HERE MON 10/08 @1:39:21 // const pickerStyle = Stye
+const pickerStyle = StyleSheet.create({
+  inputIOS:{
+  padding: 10,
+  borderColor: 'black',
+  borderWidth: 1,
+},
+  inputAndroid: {
+    padding: 10,
+    borderColor: 'black',
+    borderWidth: 1,
+  }
+})
 
 /*default*/
 // export default function App() {
