@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
   }
 })
 
+//FROM HERE MON 10/08 @1:39:21 // const pickerStyle = Stye
 
 /*default*/
 // export default function App() {
