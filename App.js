@@ -26,7 +26,7 @@ export default class App extends Component {
     { label: 'Transport' , value: 'transport'},
     { label: 'Rent' , value: 'rent'},
     { label: 'Grocery' , value: 'grocery'},
-    { label: 'Entertainment' , value: 'entertainment'}
+    { label: 'Bill' , value: 'entertainment'}
   ]
 
   render() {
@@ -52,6 +52,7 @@ export default class App extends Component {
             onValueChange = { value => this.setState({expenseCategory: value})  }
             useNativeAndroidPickerStyle = { false }
             style={pickerStyle}
+            placeholder = {pickerPlaceholder}
           />
         </View>
         {/* wrap the button in view*/}
@@ -86,9 +87,9 @@ export default class App extends Component {
       category: this.state.expenseCategory
     }
     this.listData.push(listItem)
-    console.log('adding')
-    // this.setState({updating: true})
-    this.setState({expenseAmount:0})
+    this.setState({expenseAmount:0, expenseCategory: null, validInput: false })
+    this._textInput.clear()
+    this._textInput.focus()
   }
 }
 
