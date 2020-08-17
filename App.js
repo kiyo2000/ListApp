@@ -59,7 +59,6 @@ export default class App extends Component {
             <Text style={styles.buttonText}>Add</Text>
           </TouchableOpacity>
         </View>
-
         <FlatList
             data = {this.listData}
             renderItem = {this.renderList}
