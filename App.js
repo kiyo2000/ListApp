@@ -13,7 +13,7 @@
     FlatList,
     TextInput,
     TouchableOpacity,
-    Platform,
+    //Platform,
   } from 'react-native'
   /* End ------Added for code cleaning*/
   // third party components
@@ -49,7 +49,7 @@
 
     render() {
       return (
-        <SafeAreaView>
+        <SafeAreaView style={{flex:1}}>
           <View style={styles.main}>
           <Text>Add your expense</Text>
           <TextInput
@@ -96,7 +96,7 @@
               <Text style={styles.buttonText}>Add</Text>
             </TouchableOpacity>
           </View>
-          <View>
+          <View style={{flex:1}}>
           <FlatList
               data = {this.listData}
               renderItem = {this.renderList}
@@ -125,6 +125,7 @@
         category: this.state.expenseCategory,
       }
       this.listData.push(listItem)
+      this.sortList()// Adding a sort list in descending order
       this.setState({
         expenseAmount:0, 
         expenseCategory: null, 
@@ -138,6 +139,12 @@
       if(this.state.expenseAmount > 0 && this.state.expenseCategory) {
         this.setState({validInput:true})
       }
+    }
+
+    sortList = () => {
+      this.listData.sort( (item1,item2) => {
+        return item2.id - item1.id
+      } )
     }
   }
 
