@@ -6,7 +6,7 @@
   import { StatusBar } from 'expo-status-bar'
   import React, { Component } from 'react'
   import {
-    StyleSheet,
+   // StyleSheet,
     Text,
     View,
     SafeAreaView,
@@ -90,13 +90,14 @@
               <Text style={styles.buttonText}>Add</Text>
             </TouchableOpacity>
           </View>
-
+          <View>
           <FlatList
               data = {this.listData}
               renderItem = {this.renderList}
               keyExtractor = { item => item.id }
               extraData = {this.state.expenseAmount}
           />
+          </View>
         </SafeAreaView>
       )
     }
