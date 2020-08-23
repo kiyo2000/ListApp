@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {colors} from './Colors';
 
 export const styles = StyleSheet.create({
@@ -32,5 +32,5 @@ export const styles = StyleSheet.create({
   },
   listView: {
       flex: 1,
-  }
+  },
 }) 
