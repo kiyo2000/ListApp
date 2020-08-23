@@ -12,4 +12,4 @@ export const pickerStyle = StyleSheet.create({
     borderColor: colors.primary,
     borderWidth: 1,
   },
-})
+}) 
