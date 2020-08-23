@@ -114,13 +114,12 @@
     // }
 
     renderList = ({item}) => (
-      <Item amount={item.amount} category={item.category} id={item.id} />
-      // <Item 
-      // amount={item.amount} 
-      // category={item.category}
-      // id={item.id}
-      // delete={this.removeItem}
-      // />
+      <Item 
+        amount={item.amount} 
+        category={item.category} 
+        id={item.id}
+        delete={this.removeItem}
+      />
     )
 
     removeItem = (itemId) => {
