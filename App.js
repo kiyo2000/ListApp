@@ -81,7 +81,7 @@
         this.state.expenseCategory == '') {
         return;
       }
-      let itemId = new Data().getTime().toString()
+      let itemId = new Date().getTime().toString()
       let listitem = {
         id: itemId,
         amount: this.state.expenseAmount,
