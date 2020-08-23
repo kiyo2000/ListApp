@@ -13,7 +13,7 @@
     FlatList,
     TextInput,
     TouchableOpacity,
-    AsyncStorage,
+   // AsyncStorage,
     //Platform,
   } from 'react-native'
   /* End ------Added for code cleaning*/
@@ -109,17 +109,18 @@
       )
     }
 
-    componentDidMount(){
-      this.loadList()
-    }
+    // componentDidMount(){
+    //   this.loadList()
+    // }
 
     renderList = ({item}) => (
-      <Item 
-      amount={item.amount} 
-      category={item.category}
-      id={item.id}
-      delete={this.removeItem}
-      />
+      <Item amount={item.amount} category={item.category} id={item.id} />
+      // <Item 
+      // amount={item.amount} 
+      // category={item.category}
+      // id={item.id}
+      // delete={this.removeItem}
+      // />
     )
 
     removeItem = (itemId) => {
@@ -128,9 +129,10 @@
           this.listData.splice( index, 1 )
         }
       } )
-      this.saveList()
-      this.setState({expenseAmount:0})
-    }
+    }   
+    //   this.saveList()
+    //   this.setState({expenseAmount:0})
+    // }
 
     addItem = () => {
       if( 
@@ -148,7 +150,7 @@
       }
       this.listData.push(listItem)
       this.sortList()// Adding a sort list in descending order
-      this.saveList()
+     //this.saveList()
       this.setState({
         expenseAmount:0, 
         expenseCategory: null, 
@@ -170,28 +172,28 @@
       } )
     }
 
-    saveList = async () => {
-      try {
-        await AsyncStorage.setItem(
-          'data',
-          JSON.stringify(this.listData)
-        )
-      }
-      catch( error ) {
-        console.log(error)
-      }
-    }
+    // saveList = async () => {
+    //   try {
+    //     await AsyncStorage.setItem(
+    //       'data',
+    //       JSON.stringify(this.listData)
+    //     )
+    //   }
+    //   catch( error ) {
+    //     console.log(error)
+    //   }
+    // }
   
-    loadList = async () => {
-      try{
-        let items = await AsyncStorage.getItem('data')
-        this.listData = JSON.parse( items )
-        this.setState({expenseAmount:0})
-      }
-      catch(error) {
-        console.log(error)
-      }
-    }
+    // loadList = async () => {
+    //   try{
+    //     let items = await AsyncStorage.getItem('data')
+    //     this.listData = JSON.parse( items )
+    //     this.setState({expenseAmount:0})
+    //   }
+    //   catch(error) {
+    //     console.log(error)
+    //   }
+    // }
   }
 
   // const colors = {
