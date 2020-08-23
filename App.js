@@ -24,6 +24,12 @@
   import {styles} from './styles/Main';
   import {pickerStyle} from './styles/Picker';
 
+    const pickerPlaceholder = {
+    label: 'select category',
+    value: null,
+    color: 'black'
+    }
+
   /*Using a class*/
   export default class App extends Component {
     state ={
@@ -140,11 +146,11 @@
   //   primaryDisabled : '#eb3486',
   // }
 
-  const pickerPlaceholder = {
-    label: 'select category',
-    value: null,
-    color: 'black'
-  }
+  // const pickerPlaceholder = {
+  //   label: 'select category',
+  //   value: null,
+  //   color: 'black'
+  // }
 
   // const styles = StyleSheet.create({
   //   main: {
