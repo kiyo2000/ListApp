@@ -82,7 +82,7 @@
         return;
       }
       let itemId = new Date().getTime().toString()
-      let listitem = {
+      let listItem = {
         id: itemId,
         amount: this.state.expenseAmount,
         category: this.state.expenseCategory
