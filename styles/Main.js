@@ -4,6 +4,7 @@ import {colors} from './Colors';
 export const styles = StyleSheet.create({
   main: {
     paddingHorizontal: 10,
+    // using Platform module: 25 is to  clear the stuts bar
     paddingTop: Platform.OS == 'android' ? 25 : 0,
   },
   input: {
