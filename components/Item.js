@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text,View,TouchableOpacity, Image } from 'react-native';
+import { Text,View,TouchableOpacity, Imag, } from 'react-native';
 
 import {itemStyles} from '../styles/Item';
 
@@ -12,6 +12,13 @@ export const Item = ( props ) => {
             <Text style={itemStyles.text}>{props.category}</Text>
             <Text style={itemStyles.text}>{props.amount}</Text>
         </View>
+
+        {/* <CheckBox
+        //   value={isSelected}
+        //   onValueChange={setSelection}
+        //   style={styles.checkbox}
+        /> */}
+
         {/* <TouchableOpacity onPress={ () => {props.delete( props.id ) } }> */}
         <TouchableOpacity onPress={() => {props.delete( props.id ) } }>
             <Image style={itemStyles.icon} source={require('../assets/trash-alt-solid.png')} />
