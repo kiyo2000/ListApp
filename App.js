@@ -18,9 +18,7 @@
   } from 'react-native';
   /* End ------Added for code cleaning*/
   // third party components
-  import RNPickerSelect from 'react-native-picker-select';
-  import CheckBox from '@react-native-community/checkbox';
-
+  import RNPickerSelect from 'react-native-picker-select'
   // custom components
   import { Item } from './components/Item'; // How to import another js file.
   // stylesheets
