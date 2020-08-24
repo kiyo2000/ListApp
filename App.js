@@ -15,12 +15,14 @@
     TouchableOpacity,
    // AsyncStorage,
     //Platform,
-  } from 'react-native'
+  } from 'react-native';
   /* End ------Added for code cleaning*/
   // third party components
-  import RNPickerSelect from 'react-native-picker-select'
+  import RNPickerSelect from 'react-native-picker-select';
+  import CheckBox from '@react-native-community/checkbox';
+
   // custom components
-  import { Item } from './components/Item' // How to import another js file.
+  import { Item } from './components/Item'; // How to import another js file.
   // stylesheets
   import {styles} from './styles/Main';
   import {pickerStyle} from './styles/Picker';

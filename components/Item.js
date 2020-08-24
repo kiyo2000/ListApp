@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text,View,TouchableOpacity,Image } from 'react-native'; // Need to add CheckBox
+import CheckBox from '@react-native-community/checkbox';
 
 import {itemStyles} from '../styles/Item';
 
